@@ -5,7 +5,11 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
 import testingui.diplomadoumss.org.managepage.BasePage;
+import testingui.diplomadoumss.org.utilsfiles.PropertyAccesor;
+
+import javax.xml.xpath.XPath;
 
 /**
  * @author Marcelo Garay
@@ -13,7 +17,7 @@ import testingui.diplomadoumss.org.managepage.BasePage;
  */
 public class Login extends BasePage {
 
-    @FindBy(xpath = "//input[@name='email' and @type='email']")
+    @FindBy(xpath = "//input[@name='email' and @type='text']")
     private WebElement emailTextField;
 
     @FindBy(xpath = "//input[@name='password' and @type='password']")
@@ -21,6 +25,16 @@ public class Login extends BasePage {
 
     @FindBy(xpath = "//button[@type='submit']")
     private WebElement submitpage;
+
+//    @FindBy(xpath="//@type='checkbox'")
+//    private WebElement checkpassword;
+
+    public void initBrowser() {
+        webDriver.get(PropertyAccesor.getInstance().getURL());
+    //        PageFactory.initElements(webDriver,this);
+
+    }
+
 
     public void setEmail(String email){
         emailTextField.sendKeys(email);
@@ -30,14 +44,16 @@ public class Login extends BasePage {
         passwordText.sendKeys(password);
     }
 
-    public void checkbox(){
-        WebDriver driver=new ChromeDriver();
-        driver.findElement(By.xpath("//@type='checkbox'")).click();
-    }
+//    public void checkbox(){
+//        checkpassword.click();
+//    }
 
     public void inicializateWeb()
     {
         submitpage.click();
+    }
+    public  void quit2(){
+        webDriver.quit();
     }
 
 }

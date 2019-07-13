@@ -37,17 +37,16 @@ public class PropertyAccesor {
         return prop.getProperty("browser");
     }
 
-    public String getUserName(){
+    public String getEmail() {
         return prop.getProperty("username");
     }
 
-    public String getPassword(){
+    public String getPassword() {
         return prop.getProperty("password");
     }
-
     public static void main(String[] args) {
         System.out.println(PropertyAccesor.getInstance().getURL());
-        System.out.println(PropertyAccesor.getInstance().getUserName());
+        System.out.println(PropertyAccesor.getInstance().getEmail());
         System.out.println(PropertyAccesor.getInstance().getPassword());
 
     }
