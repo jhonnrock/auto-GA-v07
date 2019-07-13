@@ -30,7 +30,7 @@ public class Login extends BasePage {
         passwordText.sendKeys(password);
     }
 
-    private void checkbox(){
+    public void checkbox(){
         WebDriver driver=new ChromeDriver();
         driver.findElement(By.xpath("//@type='checkbox'")).click();
     }
