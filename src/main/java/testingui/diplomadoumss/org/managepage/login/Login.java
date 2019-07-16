@@ -7,6 +7,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import testingui.diplomadoumss.org.managepage.BasePage;
+import testingui.diplomadoumss.org.managepage.dashboard.Dashboard;
 import testingui.diplomadoumss.org.utilsfiles.PropertyAccesor;
 
 import javax.xml.xpath.XPath;
@@ -56,4 +57,9 @@ public class Login extends BasePage {
         webDriver.quit();
     }
 
+
+    public Dashboard setCredentials() {
+
+        return new Dashboard();
+    }
 }
