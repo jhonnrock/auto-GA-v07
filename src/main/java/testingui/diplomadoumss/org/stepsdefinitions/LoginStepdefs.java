@@ -14,7 +14,6 @@ import testingui.diplomadoumss.org.managepage.login.Login;
 public class LoginStepdefs {
     private Login login;
     private Dashboard dashboard;
-
     @Given("^I load PHP travels$")
     public void iLoadPHPTravels() throws Throwable {
         login = LoadPage.loadPPHPTravels();
