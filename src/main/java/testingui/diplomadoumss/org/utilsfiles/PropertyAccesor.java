@@ -1,3 +1,4 @@
+
 package testingui.diplomadoumss.org.utilsfiles;
 
 import java.io.FileInputStream;
@@ -37,17 +38,23 @@ public class PropertyAccesor {
         return prop.getProperty("browser");
     }
 
-    public String getEmail() {
+    public static void main(String[] args) {
+        System.out.println(PropertyAccesor.getInstance().getURL());
+    }
+
+    public int getImplicitTimeWait() {
+        return Integer.parseInt(prop.getProperty("implicitTimeWait"));
+    }
+
+    public int getExplicitTimeWait() {
+        return Integer.parseInt(prop.getProperty("explicitTimeWait"));
+    }
+
+    public String getEmail(){
         return prop.getProperty("username");
     }
 
-    public String getPassword() {
+    public String getPassword(){
         return prop.getProperty("password");
-    }
-    public static void main(String[] args) {
-        System.out.println(PropertyAccesor.getInstance().getURL());
-        System.out.println(PropertyAccesor.getInstance().getEmail());
-        System.out.println(PropertyAccesor.getInstance().getPassword());
-
     }
 }

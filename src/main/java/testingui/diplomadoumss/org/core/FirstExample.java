@@ -18,14 +18,16 @@ public class FirstExample {
 //        login.inicializateWeb();
 ////second Methods
 
-        Login login=new Login();
-        login.initBrowser();
-        login.setEmail(PropertyAccesor.getInstance().getEmail());
-        login.setPassword("demoadmin");
-       //  login.checkbox();
-        login.inicializateWeb();
-       //login.quit2();
+//        Login login=new Login();
+//        login.initBrowser();
+//        login.setEmail(PropertyAccesor.getInstance().getEmail());
+//        login.setPassword("demoadmin");
+//       //  login.checkbox();
+//        login.inicializateWeb();
+//       //login.quit2();
 
+        Login login=new Login();
+        login.setCredentials();
 
 //        exampleMap();
     }
